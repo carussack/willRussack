@@ -1,0 +1,332 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Will Russack Photography</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="other/site.webmanifest">
+        <link rel="apple-touch-icon" href="other/icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- Add your site or application content here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+            body, html {
+                height: 100%;
+                color: #777;
+                line-height: 1.8;
+            }
+
+            /* Create a Parallax Effect */
+            .bgimg-1, .bgimg-2, .bgimg-3 {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* First image (Logo. Full height) */
+            .bgimg-1 {
+                background-image: url('img/tumblr_ojaogklX8P1tpwa7io1_1280.jpg');
+                min-height: 100%;
+            }
+
+            /* Second image (Portfolio) */
+            .bgimg-2 {
+                background-image: url("img/tumblr_okmupxJypF1tpwa7io1_1280.jpg");
+                min-height: 400px;
+            }
+
+            /* Third image (Contact) */
+            .bgimg-3 {
+                background-image: url("img/tumblr_oqjqkgbzAV1tpwa7io1_1280.jpg");
+                min-height: 400px;
+            }
+            .w3-wide {letter-spacing: 10px;}
+            .w3-hover-opacity {cursor: pointer;}
+
+            /* Turn off parallax scrolling for tablets and phones */
+            @media only screen and (max-device-width: 1024px) {
+                .bgimg-1, .bgimg-2, .bgimg-3 {
+                    background-attachment: scroll;
+                }
+            }
+        </style>
+
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar" id="myNavbar">
+                <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <a href="#home" class="w3-bar-item w3-button">HOME</a>
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <a href="#portfolio"><button class="w3-button w3-bar-block w3-hide-small">PORTFOLIO <i class="fa fa-caret-down"></i></button></a>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                        <a href="HumanNature.html" class="w3-bar-item w3-button">HUMAN NATURE</a>
+                        <a href="UrbanWild.html" class="w3-bar-item w3-button">URBAN WILD</a>
+                        <a href="25thFloor.html" class="w3-bar-item w3-button">25TH FLOOR</a>
+                        <a href="FamilyPortraits.html" class="w3-bar-item w3-button">FAMILY PORTRAITS</a>
+                    </div>
+                </div>
+                <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+                <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            </div>
+
+            <!-- Navbar on small screens -->
+            <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <a href="index.html#portfolio"><button class="w3-button w3-bar-block w3-hide-small">PORTFOLIO <i class="fa fa-caret-down"></i></button></a>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                        <a href="HumanNature.html" class="w3-bar-item w3-button">HUMAN NATURE</a>
+                        <a href="UrbanWild.html" class="w3-bar-item w3-button">URBAN WILD</a>
+                        <a href="25thFloor.html" class="w3-bar-item w3-button">25TH FLOOR</a>
+                        <a href="FamilyPortraits.html" class="w3-bar-item w3-button">FAMILY PORTRAITS</a>
+                    </div>
+                </div>
+                <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+                <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            </div>
+        </div>
+
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-opacity-min">WILL <span class="w3-hide-small">RUSSACK</span> PHOTOGRAPHY</span>
+            </div>
+        </div>
+
+
+        <!-- Container (Portfolio Section) -->
+        <div class="w3-content w3-container w3-padding-64" id="portfolio">
+            <h3 class="w3-center">MY WORK</h3>
+            <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+            <div class="w3-center m6 w3-display-container" id="aintbad">
+                <img src="img/AintBad6.jpg" style="width:70%" onclick="location.href='HumanNature.html'" alt="Human Nature"><br><br><br>
+                <div class="w3-display-middle w3-hover-opacity-min" style="white-space:nowrap;">
+                    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-hover-opacity" onclick="location.href='HumanNature.html'">HUMAN NATURE</span>
+                </div>
+            </div>
+            <div class="w3-center m6 w3-display-container" id="january">
+                <img src="img/january153CROP.jpg" style="width:70%" onclick="location.href='UrbanWild.html'" alt="Urban Wild (2015)"><br><br><br>
+                <div class="w3-display-middle w3-hover-opacity-min" style="white-space:nowrap;">
+                    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-hover-opacity" onclick="location.href='UrbanWild.html'">URBAN WILD</span>
+                </div>
+            </div>
+
+            <div class="w3-center m6 w3-display-container" id="HK">
+                <img src="img/HK002.jpg" style="width:70%" onclick="location.href='25thFloor.html'" alt="25th Floor (2013)"><br><br><br>
+                <div class="w3-display-middle w3-hover-opacity-min" style="white-space:nowrap;">
+                    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-hover-opacity" onclick="location.href='25thFloor.html'">25TH FLOOR</span>
+                </div>
+            </div>
+
+            <div class="w3-center m6 w3-display-container" id="chloe">
+                <img src="img/wrussack013.jpg" style="width:70%" onclick="location.href='FamilyPortraits.html'" alt="Family Portraits (2012-2015)"><br><br><br>
+                <div class="w3-display-middle w3-hover-opacity-min" style="white-space:nowrap;">
+                    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-hover-opacity" onclick="location.href='FamilyPortraits.html'">FAMILY PORTRAITS</span>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+            <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption" class="w3-opacity w3-large"></p>
+            </div>
+        </div>
+
+        <div class="bgimg-2 w3-display-container w3-opacity-min">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">ABOUT</span>
+            </div>
+        </div>
+
+        <!-- Container (About Section) -->
+        <div class="w3-content w3-container w3-padding-64" id="about">
+            <p>Will Russack is a photographer currently living in Seattle. He received his B.S in Environmental Studies from Tufts University, and his B.F.A in Photography from the School of the Museum of Fine Arts, Boston. Drawing on this cross-disciplinary approach, Will's photographs address mankind's relationship with the natural world. He brings attention to the ways in which we attempt to balance our urge to be close to nature with our impulse to control it. His diverse interests also include investigating how digital technology and the internet are changing&nbsp;how we view images, as well as&nbsp;the evolving&nbsp;function exhibited at Abigail Ogilvy Gallery in Boston and the Arenal Gallery in Santa Monica. He is also a contributor&nbsp;at <a href="http://www.loammagazine.com/" data-link-type="external" data-link-value="http://www.loammagazine.com/" target="_blank">Loam Magazine.</a></p>
+            <div class="w3-row">
+                <div class="w3-col m6 w3-center w3-padding-large">
+                    <img src="img/willprofile.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+                    <p><b><i class="fa fa-user w3-margin-right"></i>Will Russack</b></p>
+
+                </div>
+                <!-- Hide this text on small devices -->
+                <div class="w3-col m6" alt="pub">
+                    <br><br>
+                    <h5>Press and Publications</h5>
+                    <div>
+                        "Q&amp;A with Will Russack,"&nbsp;Blink,&nbsp;
+                        <a href="http://blinkaz.tumblr.com/post/142474575778/qa-with-will-russack" data-link-type="external" data-link-value="http://blinkaz.tumblr.com/post/142474575778/qa-with-will-russack">online</a>, April&nbsp;2016<br>
+                    </div>
+                    <div>
+                        "Emerging Artists Coming to Our Gallery This Spring", Abigail Ogilvy,  <a href="http://www.abigailogilvy.com/blog/2016/2/10/emerging-artists-coming-to-our-gallery-this-spring" data-link-type="external" data-link-value="http://www.abigailogilvy.com/blog/2016/2/10/emerging-artists-coming-to-our-gallery-this-spring">online</a>, February 17, 2016<br>
+                    </div>
+                    <div>
+                        The Journeys Project,&nbsp;The Art Assembly,&nbsp;<a href="http://www.theartassembly.com/journeys/" target="_blank" data-link-type="external" data-link-value="http://www.theartassembly.com/journeys/">online</a>, August 24, 2015<br>
+                    </div>
+                    <div>
+                        Various Articles, Loam Magazine, <a href="http://www.loammagazine.com/look/2016/1/6/urban-wild" data-link-type="external" data-link-value="http://www.loammagazine.com/look/2016/1/6/urban-wild" target="_blank">online</a>, 2015<br>
+                    </div>
+                    <div>
+                        "Will Russack: 25th Floor” Onward Forward,&nbsp;<a href="http://www.onwardforward.com/blog/2014/5/5/will-russack-25th-floor" data-link-type="external" data-link-value="http://www.onwardforward.com/blog/2014/5/5/will-russack-25th-floor">online</a>, May 5, 2014<br>
+                    </div>
+                    <div>
+                        “Greer Muldowney Shares Undergraduate Photography Now!” Lenscratch,&nbsp;<a href="http://lenscratch.com/2014/04/undergraduate-photography-now-part-2/" data-link-type="external" data-link-value="http://lenscratch.com/2014/04/undergraduate-photography-now-part-2/">online</a>, April 23, 2014<br>
+                    </div>
+                    <div>
+                        “New Artist Spotlight” UGallery Blog,&nbsp;<a href="http://blog.ugallery.com/post/24632619053/new-artist-spotlight-reuben-chircop-lynn" data-link-type="external" data-link-value="http://blog.ugallery.com/post/24632619053/new-artist-spotlight-reuben-chircop-lynn">online</a>, June 7, 2012<br>
+                    </div>
+                </div>
+                <div class="w3-col m10" alt="exh">
+                    <h5>Exhibitions</h5>
+                    <ul id="exhibitions">
+                        <div>2017 &nbsp; &nbsp; 21st Juried Exhibition, <a href="http://pcnw.org/gallery/21st-juried-exhibition/" data-link-type="external" data-link-value="http://pcnw.org/gallery/21st-juried-exhibition/">Photographic Center Northwest</a>, Seattle, WA</div>
+                        <div>2016 &nbsp; &nbsp; <i>Diverse/City, </i> part of&nbsp;<a href="http://www.monthofphotography.com/#about-2" data-link-type="external" data-link-value="http://www.monthofphotography.com/#about-2">MOPLA</a>,&nbsp;Arena1 Gallery, Santa Monica, CA</div>
+                        <div>2016 &nbsp; &nbsp; <i>Dualisms, </i><a href="http://www.abigailogilvy.com/exhibitions/2016/3/4/dualisms" data-link-type= "external" data-link-value="http://www.abigailogilvy.com/exhibitions/2016/3/4/dualisms">Abigail Ogilvy Gallery</a>,&nbsp;Boston, MA</div>
+                        <div>2015 &nbsp; &nbsp; <i>The&nbsp;Welcome Show</i> , Wyly Building, Anderson Ranch, Snowmass, CO </div>
+                        <div>2015 &nbsp; &nbsp;
+                            <em><a href="http://www.flashforwardfestival.com/exhibition/undergraduate-photography-now-2015/" data-link-type="external" data-link-value="http://www.flashforwardfestival.com/exihibition/undergraduate-photography-now-2015/">Undergraduate Photography Now: Part III&nbsp;</a>
+                            </em> at&nbsp;<a href="http://www.flashforwardfestival.com/" data-link-type="external" data-link-value="http://www.flashforwardfestival.com/">Flash Forward Festival</a>,&nbsp;530 Harrison Ave, Boston, MA</div>
+                        <div>2015 &nbsp; &nbsp;
+                            <em><a href="http://www.darkroomboston.com/photos-from-our-shows/" data-link-type="external" data-link-value="http://www.darkroomboston.com/photos-from-our-shows/" target="_blank">The Photography Channel</a> ,</em> &nbsp;Warehouse XI, Somerville, MA&nbsp;</div>
+                        <div>2015 &nbsp; &nbsp;
+                            <em>Sorry Wrong Number, But Let's Talk,&nbsp;</em>535 Albany St, Boston, MA&nbsp;</div>
+                        <div>2015 &nbsp; &nbsp;
+                            <em>Art in April, Tufts University</em>&nbsp;&nbsp;</div>
+                        <div>2015 &nbsp; &nbsp;
+                            <em>SMFA at Erbaluce: Mostra II,</em>&nbsp;69 Church St, Boston, MA</div>
+                        <div>2015 &nbsp; &nbsp;
+                            <em>Spectrum 2015,</em> &nbsp;School Museum of Fine Arts, Boston, MA</div>
+                        <div>2014 &nbsp; &nbsp;
+                            <em><a href="http://www.flashforwardfestival.com/exhibition/undergraduate-photography-now-2014/" data-link-type="external" data-link-value="http://www.flashforwardfestival.com/exhibition/undergraduate-photography-now-2014/">Undergraduate Photography Now:&nbsp;Part II</a></em>&nbsp;at&nbsp;<a href="http://www.flashforwardfestival.com/" data-link-type="external" data-link-value="http://www.flashforwardfestival.com/">Flash Forward Festival</a>,&nbsp;530 Harrison Ave, Boston, MA</div>
+                        <div>2014 &nbsp; &nbsp; <a href="http://www.bostonhassle.com/art/went-decadent-banality-retrospective-local-crafts-house/" data-link-type="external" data-link-value="http://www.bostonhassle.com/art/went-decadent-banality-retrospective-local-crafts-house/">Decadent Banality</a>,&nbsp;Pop-Up Show, Crafts House at Tufts University</div>
+                        <div>2014 &nbsp; &nbsp; <a href="http://www.willrussack.com/uploads/1/6/0/9/16094340/postcardfrontfullmjpg">Art in April</a>,&nbsp;Tufts University</div>
+                        <div>2014 &nbsp; &nbsp;SMFA Phtography Annual, Boston, MA</div>
+                        <div>2013 &nbsp; &nbsp; <a href="http://www.willrussack.com/uploads/1/6/0/9/16094340/travel_place_mapping_flyer_v._4.pdf"><em>Travel.Place.Mapping</em></a>,&nbsp;Boston Hostel International, Boston, MA</div>
+                        <div>2012 &nbsp; &nbsp; <em>Persistence of Vision&nbsp;</em>: Photography at the SMFA,&nbsp;Boston, MA</div>
+                        <div>2012 &nbsp; &nbsp; <em>Environmental Studies Photo Exhibition</em>, Tufts University, Medford, MA</div>
+                        <div>2011 &nbsp; &nbsp; <em>SMFA Photography Annual</em>, Boston, MA&nbsp;</div>
+                    </ul></div>
+            </div>
+        </div>
+
+        <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+            <h4>Education</h4>
+            <p>2015 &nbsp; &nbsp; &nbsp;B.S. Environmental Studies, Tufts University <br>
+                2015 &nbsp; &nbsp; &nbsp;B.F.A. Studio Arts, School Museum of Fine Arts, Boston (SMFA)/Tufts University
+            </p>
+        </div>
+
+        <!-- Third Parallax Image with Contact Text -->
+        <div class="bgimg-3 w3-display-container w3-opacity-min">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+            </div>
+        </div>
+
+        <!-- Container (Contact Section) -->
+        <div class="w3-content w3-container w3-padding-64" id="contact">
+
+            <div class="w3-center w3-padding-32 w3-section">
+                <div class="w3-col m8 w3-panel">
+                    <div class="w3-large w3-margin-bottom">
+                        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Seattle, US<br>
+                        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: w.russack@gmail.com<br>
+                    </div>
+                    <p>Leave me a note:</p>
+                    <form action="/action_page.php" target="_blank">
+                        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                            </div>
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                            </div>
+                        </div>
+                        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                        <button class="w3-button w3-black w3-right w3-section" type="submit">
+                            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <div class="w3-xlarge w3-section">
+                <a href="https://www.instagram.com/willrussack/" target="blank" data-link-type="external" data-link-value="https://www.instagram.com/willrussack"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+                <a href="https://www.linkedin.com/in/willrussack/" target="blank" data-link-type="external" data-link-value="https://www.linkedin.com/in/willrussack/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+                <a href="http://willrussack.tumblr.com/" target="blank" data-link-type="external" data-link-value="http://willrussack.tumblr.com/"><i class="fa fa-tumblr w3-hover-opacity"></i>
+            </div>
+        </footer>
+
+        <script>
+            // Modal Image Gallery
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = element.alt;
+            }
+            // Change style of navbar on scroll
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                var navbar = document.getElementById("myNavbar");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+                } else {
+                    navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+                }
+            }
+            // Used to toggle the menu on small screens when clicking on the menu button
+            function toggleFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            function load() {
+                ("exh").slice(0, 4).show();
+                load.on('click', function (e) {
+                    e.preventDefault();
+                    "exh:hidden".slice(0, 4).slideDown();
+                    if (("exh:hidden").length == 0) {
+                        (load).fadeOut('slow');
+                    }
+                    ('html,body').animate({
+                        scrollTop:
+                        this.offset().top
+                    }, 1500)
+                });
+                ('a[href=#top]').click(function () {
+                    ('body,html').animate({scrollTop: 0}, 600);
+                    return false;
+                })
+            };
+        </script>
+    </body>
+</html>
